@@ -1,0 +1,8 @@
+{
+    "name": "marlon-david/soap-mapper",
+    "autoload": {
+        "psr-4": {
+            "SoapMapper\\": "src"
+        }
+    }
+}
