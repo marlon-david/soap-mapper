@@ -10,7 +10,7 @@ class Types
 	public function proccessTypes(array $types)
 	{
 		foreach ($types as $type) {
-			preg_match_all('/(\w+) ([a-zA-Z0-9\[\]]+)/', $type, $matches);
+			preg_match_all('/(\w+) ([a-zA-Z0-9_\[\]]+)/', $type, $matches);
 
 			$temp = array();
 
