@@ -131,34 +131,6 @@ class SoapMapper
 		}
 	}
 
-	public function testGetTypes()
-	{
-		$this->loadSoapClient();
-
-		$types = $this->soap->__getTypes();
-
-		foreach ($types as $type) {
-
-			$test = preg_match_all('/(\w+) ([a-zA-Z0-9]+)/', $type, $matches);
-
-			$temp = array();
-
-			foreach ($matches[1] as $key => $match) {
-				$temp[$match] = $matches[2][$key];
-			}
-
-			$type = preg_replace(
-				array('/(\w+) ([a-zA-Z0-9]+)/', '/\n /'),
-				array('<font color="green">${1}</font> <font color="blue">${2}</font>', "\n\t"),
-				$type
-			);
-			echo $type;
-
-			echo "\n\n";
-		}
-
-	}
-
 	public function setClientName($clientName)
 	{
 		$this->clientName = $clientName;
